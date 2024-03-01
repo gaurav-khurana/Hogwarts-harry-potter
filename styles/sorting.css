@@ -85,6 +85,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+}
+.house-cards-individual:hover {
+  transform: scale(1.1);
+  transform: translateY(-20px);
 }
 
 .house-logo {
@@ -97,7 +102,15 @@
   font-size: 3rem;
   color: #333;
   text-align: center;
+  margin-top: 1rem;
 }
 .house-name-gryffindor, .house-name-slytherin, .house-name-ravenclaw {
   color: #fff;
+}
+.house-name .friend-name {
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+.house-name h3 {
+  font-size: 3rem;
 }/*# sourceMappingURL=sorting.css.map */

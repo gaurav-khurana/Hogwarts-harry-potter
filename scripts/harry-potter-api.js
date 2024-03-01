@@ -1,3 +1,5 @@
+import { GryffindorPageSuccess } from "./gryffindor.js";
+
 // Harry Potter API Setup
 const spellUrl = "https://hp-api.onrender.com/api/spells";
 const gryffindorUrl =
@@ -48,23 +50,25 @@ function getRandomIndex(array) {
 }
 
 // Submit handlers for different houses
+export const friendGryffindor = {
+  // image: image,
+  name: "",
+  wandWood: "",
+  wandCore: "",
+};
+
 async function submitGryffindor(event) {
   const dataGryffindor = await getGryffindor();
+  console.log("dataGryffindor");
   const randomIndex = getRandomIndex(dataGryffindor);
   const personGryffindor = dataGryffindor[randomIndex];
 
-  const name = personGryffindor.name;
-  const image = personGryffindor.image;
-  const wandWood = personGryffindor.wand.wood;
-  const wandCore = personGryffindor.wand.core;
-
-  const friendGryffindor = {
-    image: image,
-    name: name,
-    wandWood: wandWood,
-    wandCore: wandCore,
-  };
-
+  friendGryffindor.name = personGryffindor.name;
+  // friendGryffindor.image = personGryffindor.image;
+  friendGryffindor.wandWood = personGryffindor.wand.wood;
+  friendGryffindor.wandCore = personGryffindor.wand.core;
+  const gryffindor = document.getElementById("main");
+  gryffindor.innerHTML = GryffindorPageSuccess();
   console.log(friendGryffindor);
   // Call rendering function.
 }
@@ -138,46 +142,48 @@ async function submitSpells(event) {
   const randomIndex = getRandomIndex(dataSpells);
   const masterSpells = dataSpells[randomIndex];
 
-  const name = masterSpells.name;
-  const description = masterSpells.description;
-
-  const spells = {
-    name: name,
-    description: description,
-  };
+  spells.name = masterSpells.name;
+  spells.description = masterSpells.description;
 
   console.log(spells);
   // Call rendering function
 }
+export const spells = {
+  name: "",
+  description: "",
+};
 
+export const potion = {
+  name: "",
+  effects: "",
+};
 // Submit Handler for Potions
 async function submitPotions(event) {
   const dataPotions = await getPotions();
   const randomIndex = getRandomIndex(dataPotions);
   const havePotions = dataPotions[randomIndex];
 
-  const name = havePotions.attributes.name;
-  const effects = havePotions.attributes.effect;
-
-  const potion = {
-    name: name,
-    effects: effects,
-  };
+  potion.name = havePotions.attributes.name;
+  potion.effects = havePotions.attributes.effect;
 
   console.log(potion);
   // Call rendering function
 }
 
+setTimeout(() => {
+  const buttonGryffindor = document.getElementById("button-gryffindor");
+  console.log(buttonGryffindor);
+  const buttonSlytherin = document.getElementById("button-slytherin");
+  const buttonRavenclaw = document.getElementById("button-ravenclaw");
+  const buttonHufflepuff = document.getElementById("button-hufflepuff");
+  const buttonSpell = document.getElementById("button-spells");
+  const buttonPotion = document.getElementById("button-potion");
+
+  buttonGryffindor?.addEventListener("click", submitGryffindor);
+  buttonSlytherin?.addEventListener("click", submitSlytherin);
+  buttonRavenclaw?.addEventListener("click", submitRavenclaw);
+  buttonHufflepuff?.addEventListener("click", submitHufflepuff);
+  buttonSpell?.addEventListener("click", submitSpells);
+  buttonPotion?.addEventListener("click", submitPotions);
+}, 1000);
 // Event Listener onClick
-const buttonGryffindor = document.getElementById("button-gryffindor");
-const buttonSlytherin = document.getElementById("button-slytherin");
-const buttonRavenclaw = document.getElementById("button-ravenclaw");
-const buttonHufflepuff = document.getElementById("button-hufflepuff");
-const buttonSpell = document.getElementById("button-spell");
-const buttonPotion = document.getElementById("button-potion");
-buttonGryffindor.addEventListener("click", submitGryffindor);
-buttonSlytherin.addEventListener("click", submitSlytherin);
-buttonRavenclaw.addEventListener("click", submitRavenclaw);
-buttonHufflepuff.addEventListener("click", submitHufflepuff);
-buttonSpell.addEventListener("click", submitSpells);
-buttonPotion.addEventListener("click", submitPotions);
