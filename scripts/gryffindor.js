@@ -25,7 +25,7 @@ const Section = () => {
       src="../assets/images/gryffindor.jpeg"
       alt="Gryffindor logo"
     />
-    <a class="house-link" href="#"
+    <a class="house-link" href="#" id="button-gryffindor"
       ><h3 class="house-name house-name-gryffindor">Pick a Friend</h3>
     </a>
   </article>
@@ -36,7 +36,7 @@ const Section = () => {
       src="../assets/images/gryffindor.jpeg"
       alt="Gryffindor logo"
     />
-    <a class="house-link" href="#">
+    <a class="house-link" href="#" id="button-spell">
       <h3 class="house-name house-name-gryffindor">
         Pick a spell to Master
       </h3></a
@@ -49,7 +49,7 @@ const Section = () => {
       src="../assets/images/gryffindor.jpeg"
       alt="Gryffindor logo"
     />
-    <a class="house-link" href="#">
+    <a class="house-link" href="#" id="button-potion">
       <h3 class="house-name house-name-gryffindor">
         Pick Potion to learn from Snape
       </h3>
