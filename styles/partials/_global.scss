@@ -1,0 +1,12 @@
+@use "./typography" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "hogwarts", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-family: 400;
+  letter-spacing: 0.3px;
+}
