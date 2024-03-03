@@ -3,7 +3,7 @@ const Header = () => {
     <div class="hogwarts-logo-container">
     <img
       class="hogwarts-logo"
-      src="../assets/images/slytherin.jpeg"
+      src="../assets/images/slytherin 2.jpeg"
       alt="Slytherin logo"
     />
     <h1 class="main__title main__title-slytherin">
@@ -23,7 +23,7 @@ const Section = () => {
   <article class="house-cards-individual">
     <img
       class="house-logo"
-      src="../assets/images/slytherin.jpeg"
+      src="../assets/images/slytherin 2.jpeg"
       alt="Slytherin logo"
     />
     <a class="house-link" href="#"
@@ -34,7 +34,7 @@ const Section = () => {
   <article class="house-cards-individual">
     <img
       class="house-logo"
-      src="../assets/images/slytherin.jpeg"
+      src="../assets/images/slytherin 2.jpeg"
       alt="Slytherin logo"
     />
     <a class="house-link" href="#">
@@ -47,7 +47,7 @@ const Section = () => {
   <article class="house-cards-individual">
     <img
       class="house-logo"
-      src="../assets/images/slytherin.jpeg"
+      src="../assets/images/slytherin 2.jpeg"
       alt="Slytherin logo"
     />
     <a class="house-link" href="#">
@@ -86,7 +86,7 @@ const NewSection = (
       <article class="house-cards-individual">
         <img
           class="house-logo"
-          src="../assets/images/spells.jpeg"
+          src="../assets/images/spells 2.jpeg"
           alt="Slytherin logo"
         />
         <a class="house-link" href="#">

@@ -86,7 +86,7 @@ const NewSection = (
     <article class="house-cards-individual">
       <img
         class="house-logo"
-        src="../assets/images/spells.jpeg"
+        src="../assets/images/spells 2.jpeg"
         alt="Slytherin logo"
       />
       <a class="house-link" href="#">
