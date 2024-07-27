@@ -55,6 +55,7 @@ export const friendGryffindor = {
   name: "",
   wandWood: "",
   wandCore: "",
+  // wand: ""
 };
 
 async function submitGryffindor(event) {
@@ -67,6 +68,7 @@ async function submitGryffindor(event) {
   // friendGryffindor.image = personGryffindor.image;
   friendGryffindor.wandWood = personGryffindor.wand.wood;
   friendGryffindor.wandCore = personGryffindor.wand.core;
+  // friendGryffindor.wand = 'Wand wood is '+ friendGryffindor.wandWood + " & " + 'wand core is ' + friendGryffindor.wandCore;
   const gryffindor = document.getElementById("main");
   gryffindor.innerHTML = GryffindorPageSuccess();
   console.log(friendGryffindor);
